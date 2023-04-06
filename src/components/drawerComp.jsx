@@ -11,6 +11,9 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
+import { logo } from '../assets'
+import '../pages/analytics.css'
+
 export default function TemporaryDrawer() {
     const [state, setState] = React.useState({
         top: false,
@@ -29,25 +32,32 @@ export default function TemporaryDrawer() {
 
     const list = (anchor) => (
         <Box
-            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-            role="presentation"
+            sx={{
+                width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
+                color: 'white',
+                backgroundColor: '#1a1a1a'
+
+            }}
+            // role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
+            <div
+                className="logo"
+                style={{ paddingLeft: '30%', paddingTop: '10%', marginBottom: '5%', width: '100px', height: '100px' }}
+            >
+                <img src={logo} alt="logo" style={{ width: '100px', height: '100px' }} />
+            </div>
+            <div style={{ textAlign: 'center', marginBottom: '15%' }}>
+                <div>Ali Azimi</div>
+                <div>Full Stack Developer</div>
+            </div>
+
+
+            {/* <Divider /> */}
+
+
+            <List style={{ marginTop: '58%' }}>
                 {['Google Analytics', 'Stocks', 'Cyrpto'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
@@ -59,6 +69,10 @@ export default function TemporaryDrawer() {
                     </ListItem>
                 ))}
             </List>
+
+            <div className='center'>
+                Contact
+            </div>
         </Box>
     );
 
@@ -67,8 +81,8 @@ export default function TemporaryDrawer() {
             {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
                     <button onClick={toggleDrawer(anchor, true)}
-                        style={{ color: 'red', borderWidth: '0' }}
-                    > = </button>
+                        style={{ color: 'red', borderWidth: '0', borderRadius: '0' }}
+                    > =icon= </button>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
