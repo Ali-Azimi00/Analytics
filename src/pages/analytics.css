@@ -1,0 +1,22 @@
+.aCard {
+    position: relative;
+    /* padding: 35px; */
+    background-color: rgb(69, 68, 70);
+    height: 100%;
+    width: 100%;
+    /* margin: 10px; */
+    text-align: center;
+    align-items: center;
+
+}
+
+.boxes {
+    flex-wrap: wrap;
+}
+
+.navBar {
+    position: aboslute;
+    display: flex;
+    justify-content: left;
+
+}

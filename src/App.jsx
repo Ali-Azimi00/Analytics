@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
 import Welcome from './pages/Welcome';
-import GoogleAnalytics from './pages/GoogleAnalytics';
+import Analytics from './pages/Analytics';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Welcome />}> </Route>
-        <Route path="/GA" element={<GoogleAnalytics />} ></Route>
+        <Route path="/GA" element={<Analytics />} ></Route>
       </Routes>
 
     </BrowserRouter>
