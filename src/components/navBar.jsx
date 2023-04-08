@@ -6,16 +6,11 @@ function NavBar() {
 
     return (
         <div className="navBar">
-            <Drawer
-                variant="persistent"
-                sx={{
-                    "& .MuiPaper-root": {
-                        width: 5
-                    }
-                }}
 
-
-            />
+            <div style={{ paddingTop: '.8%' }}>
+                <Drawer
+                />
+            </div>
 
 
             <div style={{ paddingTop: '1%', fontSize: "1.5em", marginLeft: "1rem" }}>

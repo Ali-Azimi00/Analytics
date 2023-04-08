@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 // import { fadeIn } from '../utils/motion';
 // import { motion } from 'framer-motion';
 import { logo } from '../assets';
+import Icon from '@mdi/react';
+import { mdiFinance } from '@mdi/js';
+
+
 
 
 
@@ -19,10 +23,18 @@ function Welcome() {
                     {/* Buttons */}
                     <div>
                         <Link to="/GA">
-                            <button variant="contained">Google Analytics</button>
+
+                            <button variant="contained" sytle={{ width: '200px' }}>
+                                <div>
+                                    <Icon path={mdiFinance} size={1} style={{ marginRight: '5%' }} />
+
+                                </div>
+                                <div>
+                                    Google Analytics
+                                </div>
+                            </button>
                         </Link>
                     </div>
-
 
                 </div>
 

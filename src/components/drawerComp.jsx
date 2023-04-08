@@ -2,6 +2,10 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 // import Button from '@mui/material/Button';
+
+import Icon from '@mdi/react';
+import { mdiText } from '@mdi/js';
+
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -35,29 +39,33 @@ export default function TemporaryDrawer() {
             sx={{
                 width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
                 color: 'white',
-                backgroundColor: '#1a1a1a'
+                backgroundColor: '#1a1a1a',
+                // width: 250,
+                height: 800,
+                // maxHeight: "100%",
+                backgroundImage: "../assets/polygonPattern.png",
 
             }}
             // role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <div
-                className="logo"
-                style={{ paddingLeft: '30%', paddingTop: '10%', marginBottom: '5%', width: '100px', height: '100px' }}
-            >
-                <img src={logo} alt="logo" style={{ width: '100px', height: '100px' }} />
+            <div>
+                <div className="drawerItem" >
+                    <img src={logo} alt="logo" style={{ width: '150px', height: '150px' }} />
+                    <div style={{ marginTop: '5%' }}>
+                        Ali Azimi
+                    </div>
+                    <div>
+                        Full-Stack
+                    </div>
+                </div>
             </div>
-            <div style={{ textAlign: 'center', marginBottom: '15%' }}>
-                <div>Ali Azimi</div>
-                <div>Full Stack Developer</div>
-            </div>
 
 
-            {/* <Divider /> */}
+            <Divider style={{ color: 'white' }} />
 
-
-            <List style={{ marginTop: '58%' }}>
+            <List style={{ marginTop: '10%' }}>
                 {['Google Analytics', 'Stocks', 'Cyrpto'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
@@ -70,8 +78,13 @@ export default function TemporaryDrawer() {
                 ))}
             </List>
 
-            <div className='center'>
-                Contact
+            <div className='drawerItem' >
+                <div style={{ marginTop: '5%' }}>
+                    Contact
+                </div>
+                <div style={{ fontSize: '14px', marginTop: '10px' }}>
+                    azimi-swe@gmail.com
+                </div>
             </div>
         </Box>
     );
@@ -80,9 +93,15 @@ export default function TemporaryDrawer() {
         <div>
             {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <button onClick={toggleDrawer(anchor, true)}
-                        style={{ color: 'red', borderWidth: '0', borderRadius: '0' }}
-                    > =icon= </button>
+
+                    <div onClick={toggleDrawer(anchor, true)}
+                        className='button'
+                    >
+                        <Icon path={mdiText} size={1} />
+                    </div>
+
+
+
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
@@ -91,7 +110,8 @@ export default function TemporaryDrawer() {
                         {list(anchor)}
                     </Drawer>
                 </React.Fragment>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     );
 }
