@@ -6,8 +6,12 @@ import NavBar from "../components/navBar"
 function Analytics() {
     return (
         <div>
+
             <NavBar></NavBar>
-            <GA></GA>
+
+            <div style={{ marginTop: '80px' }} >
+                <GA></GA>
+            </div>
         </div>
 
     )

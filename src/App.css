@@ -14,6 +14,7 @@
 
  .logo:hover {
    filter: drop-shadow(0 0 2em #ffffffaa);
+   cursor: pointer;
    /* animation: logo-spin infinite 2s linear */
  }
 

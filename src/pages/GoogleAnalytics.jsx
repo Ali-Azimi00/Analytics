@@ -15,40 +15,50 @@ function GA() {
 
 
                 {/* try adding a second Grid container */}
-                <Grid container rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5, lg: 5 }}>
-                    <Grid item xs={11} sm={6} md={6} lg={4}>
-                        <div className='aCard'>
-                            <div>{<Chart type='bar' />}</div>
-                        </div>
+                <div>
+                    <Grid container
+                        rowSpacing={2}
+                        columnSpacing={{ xs: 5, sm: 5, md: 5, lg: 10 }}
+                    // style={{ marginBottom: '2%' }}
+                    >
+                        <Grid item xs={12} sm={12} md={9} lg={6}>
+                            <div className='aCard'>
+                                <div>{<Chart type='bar' />}</div>
+                            </div>
 
-                    </Grid>
-                    <Grid item xs={11} sm={6} md={6} lg={4}>
-                        <div className='aCard'>
-                            <div>{<Chart type='line' />}</div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={11} sm={4} md={4} lg={4}>
-                        <div className='aCard'>
-                            <div>{<Chart type='radar' />}</div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={11} sm={4} md={4} lg={4}>
-                        <div className='aCard'>
-                            <div>{<Chart type='radialBar' />}</div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={11} sm={4} md={4} lg={4}>
-                        <div className='aCard'>
-                            <div>{<Chart type='scatter' />}</div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={11} sm={4} md={4} lg={4}>
-                        <div className='aCard'>
-                            <div>{<Chart type='heatmap' />}</div>
-                        </div>
-                    </Grid>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={3} lg={6}>
+                            <div className='aCard'
+                                style={{ minHeight: '85%' }}
+                            >
+                                <div>{<Chart type='line' />}</div>
+                            </div>
+                        </Grid>
 
-                </Grid>
+                        {/*  */}
+
+                        <Grid item xs={12} sm={12} md={3} lg={4}>
+                            <div className='aCard'>
+                                <div>{<Chart type='radar' />}</div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={9} lg={4}>
+                            <div className='aCard'>
+                                <div>{<Chart type='radar' />}</div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={4}>
+                            <div className='aCard'>
+                                <div>{<Chart type='line' />}</div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={12}>
+                            <div className='aCard'>
+                                <div>{<Chart type='line' />}</div>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </div>
             </div>
         </React.Fragment>
     )

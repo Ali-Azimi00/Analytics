@@ -27,10 +27,10 @@ class App extends Component {
                 },
                 {
                     name: "series-2",
-                    data: [50, 50, 35, 20]
+                    data: [50, 50, 35, 0]
                 }
             ],
-            chartType: super.type
+            // chartType: super.type
 
         };
     }
@@ -39,12 +39,12 @@ class App extends Component {
         return (
             <div className="app">
                 <div className="row">
-                    <div className="" >
+                    <div className="mixed-chart" >
                         <Chart
                             options={this.state.options}
                             series={this.state.series}
                             type={this.props.type}
-                            width="80%"
+                        // width="80%"
                         />
                     </div>
                 </div>

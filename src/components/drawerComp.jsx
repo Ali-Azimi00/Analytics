@@ -41,9 +41,10 @@ export default function TemporaryDrawer() {
                 color: 'white',
                 backgroundColor: '#1a1a1a',
                 // width: 250,
-                height: 800,
+                height: '100%',
                 // maxHeight: "100%",
                 backgroundImage: "../assets/polygonPattern.png",
+                overflow: '-moz-hidden-unscrollable'
 
             }}
             // role="presentation"

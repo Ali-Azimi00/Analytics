@@ -1,17 +1,27 @@
 .aCard {
     position: relative;
     border-radius: 15px;
-    background-color: rgb(69, 68, 70);
+    background-color: rgb(33, 33, 33);
     height: auto;
     width: 100%;
-    /* text-align: center;
-    align-items: center; */
 
-    padding: 5%;
+    /* padding: 2%; */
     /* margin: 5%; */
-    /* margin-bottom: 5%;
-    margin-right: 5%; */
+    margin-bottom: 5%;
+    /* margin-right: 5%; */
     overflow: hidden;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 0px 20px 1px rgb(246, 246, 246, .2) inset;
+    /* box-shadow: 0px 0px 20px 1px rgb(246, 246, 246, .2); */
+
 
 }
 
@@ -40,7 +50,7 @@ button:hover {
 }
 
 .drawerCenter {
-    background-color: gray;
+
     /* position: absolute; */
     /* top: 50%; */
     /* left: 50%; */
@@ -62,21 +72,28 @@ button:hover {
 }
 
 .navBar {
-    position: relative;
-    /* position: fixed; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: left;
     z-index: 2;
 
+    /* background-color: rgb(15, 204, 75); */
     background-color: rgb(32, 32, 32);
-    width: 100%;
+
+    width: 100.5%;
 
     margin-top: -.5%;
     margin-left: -.5%;
+    padding-top: 15px;
     padding-bottom: 15px;
 
     border-radius: 0 0 10px 10px;
     border-color: white;
     border-width: 20px;
+
+    box-shadow: 0px -1px 10px .5px rgba(255, 255, 255, 0.2);
 
 }
