@@ -2,12 +2,12 @@
     position: relative;
     border-radius: 15px;
     background-color: rgb(33, 33, 33);
-    height: 80%;
+    height: auto;
     width: 100%;
 
     /* padding: 2%; */
     /* margin: 5%; */
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
     /* margin-right: 5%; */
     overflow: hidden;
 

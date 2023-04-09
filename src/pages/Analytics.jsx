@@ -9,7 +9,7 @@ function Analytics() {
 
             <NavBar></NavBar>
 
-            <div style={{ marginTop: '80px' }} >
+            <div style={{ marginTop: '5em' }} >
                 <GA></GA>
             </div>
         </div>
