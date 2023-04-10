@@ -39,8 +39,8 @@ function GA() {
                         columnSpacing={{ xs: 5, sm: 5, md: 5, lg: 5 }}
                     >
                         <Grid item xs={12} sm={12} md={9} lg={9}>
-                            <Card sx={cardTheme}>
-                                <div className='aCard'>
+                            <Card sx={{ background: 'transparent' }}>
+                                <div className=''>
                                     <div style={{ width: ' 70%' }}>
                                         {<Chart type='bar' />}
                                     </div>
@@ -53,7 +53,7 @@ function GA() {
                                 sx={{
                                     theme: cardTheme,
                                     background: 'transparent',
-                                    backgroundColor: `${wMatch ? 'purple' : 'blue'}`,
+                                    backgroundColor: `${wMatch ? '#00AA63' : 'blue'}`,
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     alignItems: "center",
@@ -61,6 +61,7 @@ function GA() {
                                     width: '100%',
                                     height: '100%',
                                     borderRadius: '15px',
+                                    boxShadow: '0px 0px 20px 1px #1a1a1a inset',
                                 }}>
 
                                 <div>

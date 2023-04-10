@@ -37,55 +37,75 @@ export default function TemporaryDrawer() {
     const list = (anchor) => (
         <Box
             sx={{
+                display: 'inline-flex',
+                flexWrap: 'wrap',
                 width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
-                color: 'white',
+                color: 'gray',
                 backgroundColor: '#1a1a1a',
                 // width: 250,
                 height: '100%',
                 // maxHeight: "100%",
                 backgroundImage: "../assets/polygonPattern.png",
-                overflow: '-moz-hidden-unscrollable'
+                overflow: 'hidden',
+
+                justifyContent: 'space-evenly'
 
             }}
             // role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <div>
-                <div className="drawerItem" >
-                    <img src={logo} alt="logo" style={{ width: '150px', height: '150px' }} />
-                    <div style={{ marginTop: '5%' }}>
-                        Ali Azimi
+            <div style={{}}>
+                <div>
+                    <div className="drawerItem" >
+                        <img src={logo} alt="logo" style={{ width: '150px', height: '150px' }} className='logo' />
+                        <div style={{
+                            marginTop: '5%',
+                            marginBottom: '5%'
+                        }}>
+                            Ali Azimi
+                        </div>
+                        <div style={{
+                            marginTop: '5%',
+                            marginBottom: '5%'
+                        }}>
+                            Full-Stack Developer
+                        </div>
                     </div>
-                    <div>
-                        Full-Stack
+                </div>
+
+
+                <Divider color='#00E396' inset='3em' />
+
+                <List style={{
+                    marginTop: ''
+                }}>
+                    {['Google Analytics', 'Stocks', 'Cyrpto'].map((text, index) => (
+                        <ListItem key={text} disablePadding className='aButton'>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
+
+                <Divider color='#00E396' />
+
+
+                <div className='drawerItem' >
+                    <div style={{
+                        marginTop: '5%'
+                    }}>
+                        Contact
+                    </div>
+                    <div style={{ fontSize: '14px', marginTop: '10px' }}>
+                        azimi-swe@gmail.com
                     </div>
                 </div>
-            </div>
 
-
-            <Divider style={{ color: 'white' }} />
-
-            <List style={{ marginTop: '10%' }}>
-                {['Google Analytics', 'Stocks', 'Cyrpto'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-
-            <div className='drawerItem' >
-                <div style={{ marginTop: '5%' }}>
-                    Contact
-                </div>
-                <div style={{ fontSize: '14px', marginTop: '10px' }}>
-                    azimi-swe@gmail.com
-                </div>
             </div>
         </Box>
     );
@@ -96,7 +116,7 @@ export default function TemporaryDrawer() {
                 <React.Fragment key={anchor}>
 
                     <div onClick={toggleDrawer(anchor, true)}
-                        className='button'
+                        className='button aButton'
                     >
                         <Icon path={mdiText} size={1} />
                     </div>

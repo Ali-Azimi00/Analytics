@@ -66,7 +66,10 @@ button {
 button:hover {
   /* border: 5px solid transparent; */
   /* border-color: red; */
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, .8);
+  border-color: rgb(255, 255, 255, .8);
+  border: 3px solid transparent;
+
   color: black;
 
   filter: drop-shadow(0 0 2em #61dafbaa);
