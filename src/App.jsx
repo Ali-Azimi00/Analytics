@@ -1,10 +1,9 @@
-// import ReactDOM from "react-dom/client";
-import React from 'react';
+import { React } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
-import Welcome from './pages/Welcome';
-// import Analytics from './pages/Analytics';
+import { Welcome, Analytics } from './pages/index.js';
+
 
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Welcome />}> </Route>
-        {/* <Route path="/" element={<Analytics />} ></Route> */}
+        <Route path="/GA" element={<Analytics />} ></Route>
       </Routes>
 
     </BrowserRouter>
