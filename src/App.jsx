@@ -1,12 +1,12 @@
-import { React } from 'react';
+// import { React } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
-import { Welcome, Analytics } from './pages/index.js';
+import { Welcome, Analytics } from './pages';
 
 
 
-function App() {
+const App = () => {
 
   return (
     <BrowserRouter>

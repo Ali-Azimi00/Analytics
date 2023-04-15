@@ -3,7 +3,7 @@ import GA from "./GoogleAnalytics"
 import NavBar from "../components/navBar"
 
 
-function Analytics() {
+const Analytics = () => {
     return (
         <div>
 

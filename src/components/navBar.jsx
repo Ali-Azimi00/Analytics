@@ -1,8 +1,9 @@
 import React from 'react';
-import Drawer from "../components/drawerComp";
+// import Drawer from "../components/drawerComp";
+import Drawer from "./drawerComp";
 // import { paperClasses } from "@mui/material/Paper"
 
-function NavBar() {
+const NavBar = () => {
 
     return (
         <div className="navBar">

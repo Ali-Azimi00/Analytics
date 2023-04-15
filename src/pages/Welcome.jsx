@@ -10,7 +10,7 @@ import { mdiFinance } from '@mdi/js';
 
 
 
-function Welcome() {
+const Welcome = () => {
 
     return (
         <React.Fragment >

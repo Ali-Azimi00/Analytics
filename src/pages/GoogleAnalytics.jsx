@@ -6,11 +6,11 @@ import Chart from '../components/chart'
 // import { CardContent } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-function GA() {
+const GA = () => {
 
     const wMatch = useMediaQuery('(min-width:600px)');
 
-    console.log('change?', typeof wMatch)
+    // console.log('change?', typeof wMatch)
 
     const cardTheme = {
         background: 'transparent',

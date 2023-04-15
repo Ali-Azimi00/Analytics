@@ -3,11 +3,9 @@ import Chart from "react-apexcharts";
 
 class App extends Component {
 
-
-
     constructor(props) {
         super(props);
-        console.log('super', props.type)
+        // console.log('super', props.type)
         this.state = {
             options: {
                 chart: {
