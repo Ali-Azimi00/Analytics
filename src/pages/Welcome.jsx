@@ -22,7 +22,7 @@ const Welcome = () => {
 
                     {/* Buttons */}
                     <div>
-                        <Link to="/GA">
+                        {/* <Link to="/GA">
 
                             <button variant="contained" sytle={{ width: '200px' }}>
                                 <div>
@@ -33,7 +33,7 @@ const Welcome = () => {
                                     Google Analytics
                                 </div>
                             </button>
-                        </Link>
+                        </Link> */}
                     </div>
 
                 </div>
