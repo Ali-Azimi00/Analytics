@@ -15,7 +15,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-import { logo } from '../assets'
+// import { logo } from '../assets'
 import '../pages/analytics.css'
 
 export default function TemporaryDrawer() {
@@ -58,7 +58,7 @@ export default function TemporaryDrawer() {
             <div style={{}}>
                 <div>
                     <div className="drawerItem" >
-                        <img src={logo} alt="logo" style={{ width: '150px', height: '150px' }} className='logo' />
+                        {/* <img src={logo} alt="logo" style={{ width: '150px', height: '150px' }} className='logo' /> */}
                         <div style={{
                             marginTop: '5%',
                             marginBottom: '5%'
