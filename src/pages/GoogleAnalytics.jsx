@@ -24,9 +24,6 @@ const GA = () => {
         borderRadius: '15px',
     }
 
-
-
-
     return (
         <React.Fragment>
             {/* <h1 style={{ textAlign: "center" }}>Google Analytics</h1> */}
