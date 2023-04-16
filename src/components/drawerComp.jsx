@@ -1,7 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-// import Button from '@mui/material/Button';
+import Button from '@mui/material/Button';
 
 import Icon from '@mdi/react';
 import { mdiText } from '@mdi/js';
@@ -19,7 +20,7 @@ import { logo } from '../assets'
 import '../pages/analytics.css'
 
 const TemporaryDrawer = () => {
-    const [state, setState] = useState({
+    const [state, setState] = React.useState({
         top: false,
         left: false,
         bottom: false,
@@ -51,7 +52,7 @@ const TemporaryDrawer = () => {
                 justifyContent: 'space-evenly'
 
             }}
-            // role="presentation"
+            role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
@@ -112,7 +113,20 @@ const TemporaryDrawer = () => {
 
     return (
         <div>
-            {['left'].map((anchor) => (
+            {(['left', 'right', 'top', 'bottom']).map((anchor) => (
+                <React.Fragment key={anchor}>
+                    <Button onClick={toggleDrawer(anchor, true)}><Icon path={mdiText} size={1} /></Button>
+                    <Drawer
+                        anchor={anchor}
+                        open={state[anchor]}
+                        onClose={toggleDrawer(anchor, false)}
+                    >
+                        {list(anchor)}
+                    </Drawer>
+                </React.Fragment>
+            ))}
+
+            {/* {['left'].map((anchor) => (
                 <div key={anchor}>
 
                     <div onClick={toggleDrawer(anchor, true)}
@@ -130,7 +144,7 @@ const TemporaryDrawer = () => {
                     </Drawer>
                 </div>
             ))
-            }
+            } */}
         </div >
     );
 }
