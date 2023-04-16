@@ -1,5 +1,5 @@
 import React from 'react';
-import Drawer from "./drawerComp";
+// import Drawer from "./drawerComp";
 
 const NavBar = () => {
 
@@ -7,8 +7,8 @@ const NavBar = () => {
         <div className="navBar">
 
             <div style={{ paddingTop: '.8%' }}>
-                <Drawer
-                />
+                {/* <Drawer
+                /> */}
             </div>
 
             <div style={{ paddingTop: '1%', fontSize: "1.5em", marginLeft: "1rem" }}>
