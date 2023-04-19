@@ -1,5 +1,5 @@
-// import { useState } from 'react';
-import * as React from 'react';
+import React, { useState } from 'react';
+// import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -20,27 +20,28 @@ import { logo } from '../assets'
 import '../pages/analytics.css'
 
 const TemporaryDrawer = () => {
-    const [state, setState] = React.useState({
-        top: false,
-        left: false,
-        bottom: false,
-        right: false,
+    const [state, setState] = useState({
+        // top: false,
+        // left: false,
+        // bottom: false,
+        // right: false,
     });
 
     const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
+        // if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+        //     return;
+        // }
+        console.log(event)
 
         setState({ ...state, [anchor]: open });
     };
 
-    const list = (anchor) => (
+    const list = () => ( //(anchor)
         <Box
             sx={{
                 display: 'inline-flex',
                 flexWrap: 'wrap',
-                width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
+                // width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
                 color: 'gray',
                 backgroundColor: '#1a1a1a',
                 // width: 250,
@@ -53,10 +54,10 @@ const TemporaryDrawer = () => {
 
             }}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
+        // onClick={toggleDrawer(anchor, false)}
+        // onKeyDown={toggleDrawer(anchor, false)}
         >
-            <div style={{}}>
+            <div>
                 <div>
                     <div className="drawerItem" >
                         <img src={logo} alt="logo" style={{ width: '150px', height: '150px' }} className='logo' />
@@ -78,9 +79,7 @@ const TemporaryDrawer = () => {
 
                 <Divider color='#00E396' inset='3em' />
 
-                <List style={{
-                    marginTop: ''
-                }}>
+                <List >
                     {['Google Analytics', 'Stocks', 'Cyrpto'].map((text, index) => (
                         <ListItem key={text} disablePadding className='aButton'>
                             <ListItemButton>
@@ -113,7 +112,7 @@ const TemporaryDrawer = () => {
 
     return (
         <div>
-            {(['left', 'right', 'top', 'bottom']).map((anchor) => (
+            {(['left']).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}><Icon path={mdiText} size={1} /></Button>
                     <Drawer
