@@ -36,7 +36,7 @@ const TemporaryDrawer = () => {
         setState({ ...state, [anchor]: open });
     };
 
-    const list = () => ( //(anchor)
+    const list = (anchor) => ( //(anchor)
         <Box
             sx={{
                 display: 'inline-flex',
@@ -54,7 +54,7 @@ const TemporaryDrawer = () => {
 
             }}
             role="presentation"
-        // onClick={toggleDrawer(anchor, false)}
+            onClick={toggleDrawer(anchor, false)}
         // onKeyDown={toggleDrawer(anchor, false)}
         >
             <div>
@@ -110,6 +110,7 @@ const TemporaryDrawer = () => {
         </Box>
     );
 
+
     return (
         <div>
             {(['left']).map((anchor) => (
@@ -120,7 +121,7 @@ const TemporaryDrawer = () => {
                         open={state[anchor]}
                         onClose={toggleDrawer(anchor, false)}
                     >
-                        {list(anchor)}
+                        {/* {list(anchor)} */}
                     </Drawer>
                 </React.Fragment>
             ))}
