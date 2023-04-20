@@ -22,7 +22,7 @@ import '../pages/analytics.css'
 const TemporaryDrawer = () => {
     const [state, setState] = useState({
         // top: false,
-        // left: false,
+        left: false,
         // bottom: false,
         // right: false,
     });
@@ -113,7 +113,17 @@ const TemporaryDrawer = () => {
 
     return (
         <div>
-            {(['left']).map((anchor) => (
+            <React.Fragment key={'left'}>
+                <Button onClick={toggleDrawer('left', true)}><Icon path={mdiText} size={1} /></Button>
+                <Drawer
+                    anchor={'left'}
+                    open={state['left']}
+                    onClose={toggleDrawer('left', false)}
+                >
+                    {list('left')}
+                </Drawer>
+            </React.Fragment>
+            {/* {(['left']).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}><Icon path={mdiText} size={1} /></Button>
                     <Drawer
@@ -121,10 +131,10 @@ const TemporaryDrawer = () => {
                         open={state[anchor]}
                         onClose={toggleDrawer(anchor, false)}
                     >
-                        {/* {list(anchor)} */}
+                        {list(anchor)}
                     </Drawer>
                 </React.Fragment>
-            ))}
+            ))} */}
 
             {/* {['left'].map((anchor) => (
                 <div key={anchor}>
