@@ -27,16 +27,16 @@ const TemporaryDrawer = () => {
         // right: false,
     });
 
-    const toggleDrawer = (anchor, open) => (event) => {
+    const toggleDrawer = (open) => (event) => {
         // if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
         //     return;
         // }
         console.log(event)
 
-        setState({ ...state, [anchor]: open });
+        setState({ ...state, 'left': open });
     };
 
-    const list = (anchor) => ( //(anchor)
+    const list = () => ( //(anchor)
         <Box
             sx={{
                 display: 'inline-flex',
@@ -49,12 +49,11 @@ const TemporaryDrawer = () => {
                 // maxHeight: "100%",
                 backgroundImage: "../assets/polygonPattern.png",
                 overflow: 'hidden',
-
                 justifyContent: 'space-evenly'
 
             }}
-            role="presentation"
-            onClick={toggleDrawer(anchor, false)}
+            // role="presentation"
+            onClick={toggleDrawer(false)}
         // onKeyDown={toggleDrawer(anchor, false)}
         >
             <div>
@@ -114,13 +113,13 @@ const TemporaryDrawer = () => {
     return (
         <div>
             <React.Fragment key={'left'}>
-                <Button onClick={toggleDrawer('left', true)}><Icon path={mdiText} size={1} /></Button>
+                <Button onClick={toggleDrawer(true)}><Icon path={mdiText} size={1} /></Button>
                 <Drawer
                     anchor={'left'}
                     open={state['left']}
-                    onClose={toggleDrawer('left', false)}
+                    onClose={toggleDrawer(false)}
                 >
-                    {list('left')}
+                    {list()}
                 </Drawer>
             </React.Fragment>
             {/* {(['left']).map((anchor) => (
