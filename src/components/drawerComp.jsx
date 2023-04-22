@@ -112,10 +112,10 @@ const TemporaryDrawer = () => {
 
     return (
         <div>
-            <React.Fragment key={'left'}>
+            <React.Fragment>
                 <Button onClick={toggleDrawer(true)}><Icon path={mdiText} size={1} /></Button>
                 <Drawer
-                    anchor={'left'}
+                    // anchor={'left'}
                     open={state['left']}
                     onClose={toggleDrawer(false)}
                 >
