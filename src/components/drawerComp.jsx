@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 
-import Icon from '@mdi/react';
+import { Icon } from '@mdi/react';
 import { mdiText } from '@mdi/js';
 
 import List from '@mui/material/List';
@@ -36,7 +36,7 @@ const TemporaryDrawer = () => {
         setState({ ...state, 'left': open });
     };
 
-    const list = () => ( //(anchor)
+    const lists = () => ( //(anchor)
         <Box
             sx={{
                 display: 'inline-flex',
@@ -112,16 +112,19 @@ const TemporaryDrawer = () => {
 
     return (
         <div>
-            {/* <React.Fragment>
-                <Button onClick={toggleDrawer(true)}><Icon path={mdiText} size={1} /></Button>
-                <Drawer
-                    // anchor={'left'}
-                    open={state['left']}
-                    onClose={toggleDrawer(false)}
-                >
-                    {list()}
-                </Drawer>
-            </React.Fragment> */}
+            {/* <React.Fragment> */}
+            <Button onClick={toggleDrawer(true)}>
+                {/* hi */}
+                <Icon path={mdiText} size={1} />
+            </Button>
+            <Drawer
+                // anchor={'left'}
+                open={state['left']}
+                onClose={toggleDrawer(false)}
+            >
+                {lists()}
+            </Drawer>
+            {/* </React.Fragment> */}
             {/* {(['left']).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}><Icon path={mdiText} size={1} /></Button>
