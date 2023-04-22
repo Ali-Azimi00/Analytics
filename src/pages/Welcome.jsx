@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import { fadeIn } from '../utils/motion';
 // import { motion } from 'framer-motion';
 import { logo } from '../assets';
-import Icon from '@mdi/react';
+import { Icon } from '@mdi/react';
 import { mdiFinance } from '@mdi/js';
 
 

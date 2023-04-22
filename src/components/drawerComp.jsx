@@ -52,7 +52,7 @@ const TemporaryDrawer = () => {
                 justifyContent: 'space-evenly'
 
             }}
-            // role="presentation"
+            role="presentation"
             onClick={toggleDrawer(false)}
         // onKeyDown={toggleDrawer(anchor, false)}
         >
@@ -114,7 +114,6 @@ const TemporaryDrawer = () => {
         <div>
             {/* <React.Fragment> */}
             <Button onClick={toggleDrawer(true)}>
-                {/* hi */}
                 <Icon path={mdiText} size={1} />
             </Button>
             <Drawer
@@ -124,6 +123,7 @@ const TemporaryDrawer = () => {
             >
                 {lists()}
             </Drawer>
+
             {/* </React.Fragment> */}
             {/* {(['left']).map((anchor) => (
                 <React.Fragment key={anchor}>
