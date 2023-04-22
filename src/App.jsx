@@ -1,14 +1,14 @@
 // import { React } from 'react';
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css'
-
+// import './App.css'
 import { Analytics } from './pages';
 
 
 
-const App = () => {
+function App() {
 
   return (
+    // <h1>hello</h1>
     <Analytics />
     // <BrowserRouter>
     //   <Routes>

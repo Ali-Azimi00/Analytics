@@ -112,7 +112,7 @@ const TemporaryDrawer = () => {
 
     return (
         <div>
-            <React.Fragment>
+            {/* <React.Fragment>
                 <Button onClick={toggleDrawer(true)}><Icon path={mdiText} size={1} /></Button>
                 <Drawer
                     // anchor={'left'}
@@ -121,7 +121,7 @@ const TemporaryDrawer = () => {
                 >
                     {list()}
                 </Drawer>
-            </React.Fragment>
+            </React.Fragment> */}
             {/* {(['left']).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}><Icon path={mdiText} size={1} /></Button>
